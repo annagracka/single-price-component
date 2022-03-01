@@ -1,0 +1,20 @@
+{
+  "name": "single-price-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass ./src/scss/styles.scss ./src/scss/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

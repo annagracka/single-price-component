@@ -1,0 +1,9 @@
+body {
+  background: #E6EFF6;
+  height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
