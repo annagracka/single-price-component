@@ -46,26 +46,77 @@ ul li {
   border-radius: 10px;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .box {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .box {
+    position: relative;
+    margin: 50px auto;
+    top: unset;
+    right: unset;
+    transform: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media screen and (max-width: 400px) {
+  .box {
+    width: 90%;
+  }
+}
 .box__introduction {
   padding: 35px 40px;
   background-color: #FFFFFF;
   grid-area: 1/1/2/3;
 }
+@media screen and (max-width: 400px) {
+  .box__introduction {
+    padding: 25px;
+  }
+}
 .box__introduction--title {
   color: #4ABEBD;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 400px) {
+  .box__introduction--title {
+    font-size: 19px;
+  }
+}
 .box__introduction--subtitle {
   color: #BFDF32;
 }
+@media screen and (max-width: 400px) {
+  .box__introduction--subtitle {
+    font-size: 15px;
+  }
+}
 .box__introduction--description {
   color: #A5A7B4;
+}
+@media screen and (max-width: 400px) {
+  .box__introduction--description {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .box__introduction {
+    grid-area: auto;
+  }
 }
 .box__subscription {
   padding: 35px 40px;
   background-color: #2BB3B1;
   color: #FFFFFF;
   grid-area: 2/1/3/2;
+}
+@media screen and (max-width: 400px) {
+  .box__subscription {
+    padding: 25px;
+  }
 }
 .box__subscription--price {
   display: flex;
@@ -74,6 +125,11 @@ ul li {
 }
 .box__subscription--price h3 {
   opacity: 0.5;
+}
+@media screen and (max-width: 600px) {
+  .box__subscription {
+    grid-area: auto;
+  }
 }
 .box__submit {
   text-align: center;
@@ -91,12 +147,22 @@ ul li {
   color: #FFFFFF;
   grid-area: 2/2/3/3;
 }
+@media screen and (max-width: 400px) {
+  .box__why-us {
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .box__why-us {
+    grid-area: auto;
+  }
+}
 .box__list {
   padding: 0;
 }
 
 .price {
-  font-size: 29px;
+  font-size: 1.8125rem;
 }
 
 .submit-button {
@@ -110,4 +176,12 @@ ul li {
   font-weight: 100;
   list-style: none;
   padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
 }

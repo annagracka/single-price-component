@@ -1,8 +1,13 @@
 @import 'colors';
 @import 'fonts';
+@import 'media_queries';
 
 @mixin space-around {
     padding: 35px 40px;
+
+    @include mobile {
+        padding: 25px;
+    }
 }
 
 *, *::before, *::after {
@@ -34,6 +39,25 @@ ul li {
     border-radius: 10px;
     overflow: hidden;
 
+    @include tablet {
+        width: 80%;
+    }
+
+    @include tablet-sm {
+        position: relative;
+        margin: 50px auto;
+        top:unset;
+        right: unset;
+        transform: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        
+    }
+
+    @include mobile {
+        width: 90%;
+    }
+
     &__introduction {
         @include space-around;
         background-color: $light-color;
@@ -42,14 +66,30 @@ ul li {
         &--title {
             color: $secondary-color;
             margin-bottom: 15px;
+
+            @include mobile {
+                font-size: 19px;
+            }
         }
 
         &--subtitle {
             color: $bright-color;
+
+            @include mobile {
+                font-size: 15px;
+            }
         }
 
         &--description {
             color: $neutral-color;
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        @include tablet-sm {
+            grid-area: auto;
         }
     }
 
@@ -67,6 +107,10 @@ ul li {
             & h3 {
                 opacity: .5;
             }
+        }
+
+        @include tablet-sm {
+            grid-area: auto;
         }
     }
 
@@ -87,8 +131,11 @@ ul li {
         background-color: $secondary-color;
         color: $light-color;
         grid-area: 2 / 2 / 3 / 3;
-    }
 
+        @include tablet-sm {
+            grid-area: auto;
+        }
+    }
 
     &__list {
         padding: 0;
@@ -96,7 +143,7 @@ ul li {
 }
 
 .price {
-    font-size: 29px;
+    font-size: 1.8125rem;
 }
 
 .submit-button {
@@ -111,4 +158,13 @@ ul li {
     font-weight: 100;
     list-style: none;
     padding: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
 }
