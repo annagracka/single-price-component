@@ -141,6 +141,9 @@ ul li {
   border-radius: 8px;
   box-shadow: 0 0.3125rem 0.625rem #218381;
 }
+.box__submit:hover {
+  background-color: #ABC82D;
+}
 .box__why-us {
   padding: 35px 40px;
   background-color: #4ABEBD;

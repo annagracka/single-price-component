@@ -73,7 +73,7 @@ ul li {
         }
 
         &--subtitle {
-            color: $bright-color;
+            color: $bright-green-color;
 
             @include mobile {
                 font-size: 15px;
@@ -119,11 +119,15 @@ ul li {
         text-align: center;
         margin-top: 1.7rem;
         width: 100%;
-        background-color: $bright-color;
+        background-color: $bright-green-color;
         font-weight: 700;
         padding: 10px; 
         border-radius: 8px;
         box-shadow: 0 0.3125rem 0.625rem $dark-color;
+
+        &:hover {
+            background-color: $dark-green-color;
+        }
     }
 
     &__why-us {
