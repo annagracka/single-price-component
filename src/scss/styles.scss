@@ -1,11 +1,114 @@
 @import 'colors';
+@import 'fonts';
 
-body {
-    background: $background-color;
-    height: 100vh;
+@mixin space-around {
+    padding: 35px 40px;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
-  }
+    line-height: 1.6;
+}
+
+body {
+    background: $background-color;
+    height: 100vh;
+    font-family: 'Karla', sans-serif;
+}
+
+ul li {
+    line-height: 1.5;
+}
+
+.box {
+    position: absolute;
+    box-shadow: 0px 50px 50px -20px #FFF;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 215px 260px;
+    width: 635px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__introduction {
+        @include space-around;
+        background-color: $light-color;
+        grid-area: 1 / 1 / 2 / 3;
+
+        &--title {
+            color: $secondary-color;
+            margin-bottom: 15px;
+        }
+
+        &--subtitle {
+            color: $bright-color;
+        }
+
+        &--description {
+            color: $neutral-color;
+        }
+    }
+
+    &__subscription {
+        @include space-around;
+        background-color: $primary-color;
+        color: $light-color;
+        grid-area: 2 / 1 / 3 / 2;
+
+        &--price {
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+
+            & h3 {
+                opacity: .5;
+            }
+        }
+    }
+
+    
+    &__submit {
+        text-align: center;
+        margin-top: 1.7rem;
+        width: 100%;
+        background-color: $bright-color;
+        font-weight: 700;
+        padding: 10px; 
+        border-radius: 8px;
+        box-shadow: 0 0.3125rem 0.625rem $dark-color;
+    }
+
+    &__why-us {
+        @include space-around;
+        background-color: $secondary-color;
+        color: $light-color;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+
+    &__list {
+        padding: 0;
+    }
+}
+
+.price {
+    font-size: 29px;
+}
+
+.submit-button {
+    text-decoration: none;
+
+    &:visited, :link {
+        color: $light-color;
+    }
+}
+
+.list {
+    font-weight: 100;
+    list-style: none;
+    padding: 0;
+}
